@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Time Traveler's Nexus</title>
+    <style>
+        html, body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: url('../Images/History.jpg') no-repeat center center fixed;
+            background-size: cover;
+            color: #ffffff;
+            text-align: center;
+            scroll-behavior: smooth;
+            overflow: hidden;
+        }
+
+        .page-container {
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .scrollable-page {
+            width: 100vw;
+            height: 100vh;
+            overflow-y: scroll;
+            scroll-snap-type: y mandatory;
+        }
+
+        .page-section {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            scroll-snap-align: start;
+        }
+
+        /* Navigation Bar */
+        nav {
+            background: rgba(0, 0, 0, 0.8);
+            padding: 15px;
+            box-shadow: 0px 4px 8px rgba(0, 255, 255, 0.5);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+        }
+
+        nav a {
+            color: #0ff;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 1.2rem;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: #f4a261;
+        }
+
+        .time-periods a {
+            display: inline-block;
+            color: #ff0;
+            font-size: 20px;
+            margin: 15px;
+            padding: 12px 25px;
+            border: 2px solid #ff0;
+            border-radius: 10px;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+        .time-periods a:hover {
+            background: #ff0;
+            color: #000;
+            box-shadow: 0 0 15px #ff0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="Landingpage.html">Home</a>
+            <a href="diary.html">Diary</a>
+            <a href="entries.html">Entries</a>
+            <a href="time-travel.html">Time Travel</a>
+            <a href="aboutus.html">About Us</a>
+            <a href="contact-us.html">Contact Us</a>
+            <a href="admin.html">Admin</a>
+        </nav>
+    </header>
+    
+    <div class="scrollable-page">
+        <section class="page-section">
+            <div>
+                <h3>Choose Your Era</h3>
+                <a href="time-travel.html#ancient">Ancient Eras</a>
+                <a href="time-travel.html#medieval">Medieval Times</a>
+                <a href="time-travel.html#future">The Future</a>
+            </div>
+        </section>
+    </div>
+    
+    <footer>
+        <p>&copy; 2025 Time Traveler's Diary. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>
