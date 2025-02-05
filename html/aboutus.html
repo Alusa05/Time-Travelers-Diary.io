@@ -5,20 +5,48 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Us - Time Traveler's Diary</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-            color: #333;
-        }
+
+       body {
+    font-family:'Graduate', cursive;
+    margin: 0;
+    background: url('../Images/Egypt.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: #ffffff;
+    
+}
+
+
+
+/* Navigation Bar */
+nav {
+    background: url('../Images/History.jpg') no-repeat center center/cover;
+    padding: 15px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 1.2rem;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #ffffff;
+}
         .container {
             max-width: 800px;
             margin: 50px auto;
             padding: 20px;
-            background: white;
+            background: black;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             border-radius: 10px;
+            position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
         }
         h1 {
             text-align: center;
@@ -30,6 +58,17 @@
     </style>
 </head>
 <body>
+    <header>
+        
+        <nav>
+            <a href="Landingpage.html">Home</a>
+            <a href="diary.html">Diary</a>
+            <a href="entries.html">Entries</a>
+            <a href="aboutus.html">About Us</a>
+            <a href="contact-us.html">Contact Us</a>
+            <a href="admin.html">Admin</a>
+        </nav>
+    </header>
     <div class="container">
         <h1>About Us</h1>
         <p>Welcome to <strong>Time Traveler's Diary</strong>, a digital space where history, imagination, and time travel converge. Our website is dedicated to documenting the past, exploring the future, and embracing the possibilities of time travel—whether through historical records, speculative fiction, or scientific discoveries.</p>
