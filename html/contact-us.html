@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Time Traveler's Diary</title>
+   
+</head>
+<body>
+
+    <header>
+        <h1>Contact the Time Traveler's Diary</h1>
+        <p>Your journey through time starts here! Send us your thoughts and queries from any era!</p>
+    </header>
+
+    <div class="contact-container">
+        <div class="contact-form">
+            <h2>Send Us a Message from the Future!</h2>
+            <form id="contactForm">
+                <input type="text" id="name" name="name" placeholder="Your Name" required>
+                <input type="email" id="email" name="email" placeholder="Your Email" required>
+                <textarea id="message" name="message" rows="5" placeholder="Your Message" required></textarea>
+                <button type="submit">Send Message to the Past</button>
+            </form>
+        </div>
+
+        <div class="time-machine">
+            <h3>Your Time Machine Awaits!</h3>
+            <img src="../Images/TT.jpg" alt="Time Machine">
+        </div>
+    </div>
+
+    
+
+   
+
+    <footer>
+        <p>&copy; 2025 Time Traveler's Diary. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        
+
+        // Handle contact form submission
+        document.getElementById("contactForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+            const name = document.getElementById("name").value;
+            const email = document.getElementById("email").value;
+            const message = document.getElementById("message").value;
+
+            if (name && email && message) {
+                alert("Thank you, " + name + "! Your message has been sent across time.");
+                document.getElementById("contactForm").reset(); // Reset form
+            } else {
+                alert("Please fill in all fields.");
+            }
+        });
+    </script>
+
+</body>
+</html>
