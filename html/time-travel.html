@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Time Traveler's Nexus</title>
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap');
+
         html, body {
             font-family: 'Poppins', sans-serif;
             margin: 0;
@@ -27,12 +29,23 @@
         .page-section {
             height: 100vh;
             display: flex;
+            flex-direction: column;
             justify-content: center;
             align-items: center;
             scroll-snap-align: start;
+            padding: 20px;
+            backdrop-filter: blur(5px);
+            background: rgba(0, 0, 0, 0.7);
+            box-shadow: 0 4px 10px rgba(0, 255, 255, 0.2);
+            animation: fadeIn 1.2s ease-in-out;
+            text-align: center;
         }
 
-        /* Navigation Bar */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
         nav {
             background: rgba(0, 0, 0, 0.8);
             padding: 15px;
@@ -49,30 +62,59 @@
             text-decoration: none;
             margin: 0 15px;
             font-size: 1.2rem;
-            transition: color 0.3s ease;
+            transition: color 0.3s ease, transform 0.2s ease;
+            display: inline-block;
         }
 
         nav a:hover {
             color: #f4a261;
+            transform: scale(1.1);
         }
 
-        .time-periods a {
+        .era-button {
             display: inline-block;
-            color: #ff0;
-            font-size: 20px;
-            margin: 15px;
-            padding: 12px 25px;
-            border: 2px solid #ff0;
+            font-size: 18px;
+            padding: 12px 30px;
             border-radius: 10px;
+            border: 2px solid #ff0;
+            background: linear-gradient(45deg, #ff0, #f4a261);
+            color: #000;
             text-decoration: none;
-            transition: 0.3s;
+            font-weight: bold;
+            transition: 0.3s ease-in-out;
+            box-shadow: 0 0 10px rgba(255, 255, 0, 0.6);
+            margin-top: 20px;
         }
 
-        .time-periods a:hover {
-            background: #ff0;
-            color: #000;
+        .era-button:hover {
+            background: #000;
+            color: #ff0;
             box-shadow: 0 0 15px #ff0;
         }
+
+        img {
+            max-width: 80%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(255, 255, 255, 0.3);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        img:hover {
+            transform: scale(1.05);
+        }
+
+        footer {
+            background: rgba(0, 0, 0, 0.8);
+            color: #ffffff;
+            text-align: center;
+            padding: 15px;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+            font-size: 0.9rem;
+        }
+
     </style>
 </head>
 <body>
@@ -91,35 +133,35 @@
     <div class="scrollable-page">
         <section class="page-section">
             <div>
-                <h3>Choose Your Era</h3>
-                <a href="#ancient">Ancient Eras</a>
-                <a href="#medieval">Medieval Times</a>
-                <a href="#future">The Future</a>
+                <h2>Choose Your Era</h2>
+                <a class="era-button" href="#ancient">Ancient Eras</a>
+                <a class="era-button" href="#medieval">Medieval Times</a>
+                <a class="era-button" href="#future">The Future</a>
             </div>
         </section>
         
         <section id="ancient" class="page-section">
-            <h3>Ancient Eras</h3>
-            <br>
-            <br>
-            <br>
+            <h2>Ancient Eras</h2>
             <p>Walk among pharaohs, witness gladiators in battle, and uncover lost civilizations.</p>
             <img src="../Images/Ancient.jpg" alt="Ancient Era">
+            <br>
+            <a class="era-button" href="tour-ancient.html">Take a Tour</a>
         </section>
         
         <section id="medieval" class="page-section">
-            <h3>Medieval Times</h3>
-            <br>
-            <br>
-            <br>
+            <h2>Medieval Times</h2>
             <p>Don your armor, wield your sword, and experience the chivalry and conquests of the Middle Ages.</p>
             <img src="images/medieval.jpg" alt="Medieval Era">
+            <br>
+            <a class="era-button" href="tour-medieval.html">Take a Tour</a>
         </section>
         
         <section id="future" class="page-section">
-            <h3>The Future</h3>
+            <h2>The Future</h2>
             <p>Soar through neon-lit skylines, explore cybernetic wonders, and unlock the next frontier of humanity.</p>
             <img src="images/future.jpg" alt="Future World">
+            <br>
+            <a class="era-button" href="tour-future.html">Take a Tour</a>
         </section>
     </div>
     
