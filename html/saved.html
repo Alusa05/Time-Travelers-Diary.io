@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saved Diaries</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Graduate', cursive;
+            background-image: url('../Images/History.jpg');
+            color: #ffffff;
+            text-align: center;
+        }
+
+        nav {
+            background: url('../Images/History.jpg') no-repeat center center/cover;
+            padding: 15px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+            text-align: center;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 1.2rem;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: #ffffff;
+        }
+
+        h1 {
+            font-size: 3rem;
+            color: #fff;
+        }
+
+        .entry {
+            background: rgba(255, 255, 255, 0.9);
+            color: #000;
+            padding: 15px;
+            border-radius: 10px;
+            margin-top: 10px;
+            font-family: 'Patrick Hand', cursive;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="Landingpage.html">Home</a>
+            <a href="diary.html">Diary</a>
+            <a href="saved.html">Saved Diaries</a>
+        </nav>
+    </header>
+
+    <div class="container">
+        <h1>Saved Diaries</h1>
+        <div id="savedEntries" class="entries"></div>
+    </div>
+
+    <script>
+        window.onload = function() {
+            // Retrieve saved diary entries from localStorage
+            let savedEntries = JSON.parse(localStorage.getItem("diaries")) || [];
+
+            // Loop through the entries and display them
+            let entriesDiv = document.getElementById("savedEntries");
+            if (savedEntries.length > 0) {
+                savedEntries.forEach(entry => {
+                    let entryDiv = document.createElement("div");
+                    entryDiv.classList.add("entry");
+                    entryDiv.textContent = entry;
+                    entriesDiv.appendChild(entryDiv);
+                });
+            } else {
+                entriesDiv.innerHTML = "<p>No entries saved yet.</p>";
+            }
+        };
+    </script>
+</body>
+</html>
